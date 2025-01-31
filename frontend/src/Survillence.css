@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Layout and Containers */
+.surveillance-container {
+  padding: 2rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Increased space for the results section */
+  gap: 2rem; /* Space between columns */
+}
+
+.time-range-container,
+.results-section {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 0.75rem;
+}
+
+.time-range-container {
+  max-width: 350px; /* Max width for the time range container */
+}
+
+.results-section {
+  background-color: #f3f4f6;
+  padding: 2rem; /* Increased padding for spacious layout */
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 600px; /* Increased maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Titles */
+.section-title {
+  font-size: 2.5rem; /* Increased size for the main heading */
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Reduced space below the title */
+  color: #1f2937;
+  text-align: center; /* Centered the title */
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #374151;
+  margin-bottom: 1rem; /* Reduced space below the intro text */
+  text-align: center; /* Centered the intro text */
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Date Picker Section */
+.date-picker-section {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.date-picker-label {
+  font-size: 1rem;
+  color: #4b5563;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.date-picker {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.date-picker:focus {
+  border-color: #2563eb;
+  box-shadow: 0px 0px 4px rgba(37, 99, 235, 0.6);
+}
+
+/* Confirm Button */
+.confirm-button {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+  background-color: #1d4ed8;
+}
+
+.confirm-button:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+.confirm-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Results Section */
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Remove default margin to fit the container */
+}
+
+.result-item {
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column; /* Ensure proper alignment */
+}
+
+.result-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.result-item-images {
+  display: flex; /* Row layout for images */
+  flex-wrap: wrap; /* Allow wrapping if there are too many images */
+  gap: 0.5rem; /* Add spacing between images */
+}
+
+.error-message {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.no-data-message {
+  color: #6b7280;
+  text-align: center;
+}
+/* Image Button */
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.image-button img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.image-button img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}

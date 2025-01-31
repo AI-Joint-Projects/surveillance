@@ -1,0 +1,278 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Import Myriad Pro font */
+@import url('https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@400;700&display=swap');
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: #34495e;
+  overflow-x: hidden;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 260px;
+  background: #ffffff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  z-index: 100;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.sidebar:hover {
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.admin-section {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  /* margin-bottom: 20px; */
+}
+
+.admin-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url('./assets/admin.jpg'); /* Adjust this path based on your folder structure */
+  background-size: cover; /* Ensure the image covers the background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Avoid image tiling */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.admin-text {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar buttons */
+.sidebar-button {
+  display: block;
+  width: 100%;
+  padding: 15px 25px;
+  background-color: transparent;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-button:hover {
+  background-color: #ecf0f1;
+}
+
+.sidebar-button i {
+  margin-right: 10px;
+  color: #7f8c8d;
+}
+
+/* Active button style */
+.sidebar-button.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.sidebar-button.active i {
+  color: white;
+}
+
+/* Header container */
+.header-container {
+  margin-left: 260px;
+  padding: 30px;
+  background-color: #e4e6ed6c;
+  min-height: 100vh;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 10px;
+  /* font-family: 'Myriad Pro', sans-serif; */
+}
+
+.header-container p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  .admin-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url('./assets/image.jpg'); /* Adjust this path based on your folder structure */
+  background-size: cover; /* Ensure the image covers the background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Avoid image tiling */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 10px;
+   font-family: 'Poppins', sans-serif;
+}
+
+  
+}
+
+.header-container .action-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-container .action-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .sidebar {
+      width: 80px;
+      overflow: hidden;
+  }
+
+  .sidebar:hover {
+      width: 260px;
+  }
+
+  .admin-text,
+  .sidebar-button span {
+      display: none;
+  }
+
+  .admin-icon {
+      margin: 0 auto;
+  }
+
+  .sidebar-button i {
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+  }
+
+  .header-container {
+      margin-left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px 0;
+      z-index: 101;
+      border-top: 1px solid #e0e0e0;
+      border-right: none;
+  }
+
+  .header-container {
+      margin-left: 0;
+      padding: 10px;
+      margin-bottom: 60px;
+  }
+
+  .admin-section {
+      display: none;
+  }
+
+  .sidebar-button span {
+      display: block;
+  }
+
+  .sidebar-button i {
+      display: none;
+  }
+}
+
+
+
+.main-content {
+  padding: 20px;
+}
+
+.dashboard-image {
+  max-width: 85%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 7%;
+  transition: transform 0.3s ease, opacity 0.3s ease, translate 0.3s ease;
+  animation: moveImage 5s infinite alternate;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 5px solid transparent;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f0f2f5, #34495e);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.dashboard-image:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
+}

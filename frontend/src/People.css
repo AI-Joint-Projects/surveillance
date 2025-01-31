@@ -1,0 +1,249 @@
+/* General Container Adjustments */
+.people-container {
+    max-width: 600px; /* Wider container for better layout on larger screens */
+    margin: 20px auto; /* Center the container */
+    padding: 30px;
+    font-size: 1rem; /* Reset to default, adjust within elements if needed */
+    /* background-color: #f8f9fa;  */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+}
+
+/* Search Bar Section */
+.people-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    max-width: 400px; /* Reduced max-width for better balance */
+    border-radius: 8px; /* Consistent rounded corners */
+    overflow: hidden; /* Prevents icon from overflowing */
+    border: 1px solid #ced4da; /* Light border */
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: none; /* Remove input border */
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25); /* Subtle focus ring */
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-icon:hover {
+    background-color: #1d4ed8;
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px; /* Slightly reduced padding */
+    font-size: 1rem;
+    background-color: #1cda35;
+    color: white;
+    border: none;
+    border-radius: 6px; /* Slightly less rounded */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Add transform for hover effect */
+}
+
+.add-button:hover {
+    background-color: #059669;
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.add-button i {
+    font-size: 1.2rem;
+}
+
+/* People Cards Section */
+.people-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+}
+
+.people-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #eee; /* Add a light border */
+}
+
+.people-card:hover {
+    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #ddd;
+}
+
+.people-card h3 {
+    margin: 0 0 5px; /* Added bottom margin */
+    font-size: 1.2rem;
+    color: #374151; /* Darker heading color */
+}
+
+.people-card p {
+    margin: 0;
+    color: #6b7280; /* Slightly lighter text color */
+    font-size: 1.2rem;
+}
+
+.card-actions { /* Container for buttons in card */
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    margin-top: 10px; /* Add some space above the buttons */
+}
+
+.delete-button {
+    float: right;
+    
+   
+    
+    background-color: #dc2626;
+    color: white;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    
+}
+
+.delete-button:hover {
+    background-color: #b91c1c;
+    transform: scale(1.05);
+}
+
+.delete-button i {
+    font-size: 1rem;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    float: left; /* Float the avatar to the left */
+}
+
+.people-card .card-content { /* Container for text content in card */
+    overflow: hidden; /* Ensure text doesn't overlap avatar */
+}
+
+
+
+/* Modal Section */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.cancel-button {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #d1d5db;
+}
+
+/* Icons */
+.icon {
+  font-size: 1.2rem;
+}
