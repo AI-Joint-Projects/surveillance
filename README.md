@@ -1,4 +1,4 @@
-#Open Set Face Recognition and Surveillance
+# Open Set Face Recognition and Surveillance
 
 
 ## Getting Started
@@ -9,12 +9,16 @@ Ensure you have the following installed:
 - Python (for the backend)
 - MongoDB (for metadata storage)
 - Qdrant (for vector embeddings storage)
+- Pytorch
+- Cuda v>=1.8
 
 ## Model 
+```
+cd model
+python model.py
+```
 
-
-#﻿# Surveillance App
-
+## Surveillance App
 This is a surveillance application that leverages open-set face recognition to identify individuals in real time. It consists of a frontend and a backend working together to process and recognize faces from a live video feed.
 
 
